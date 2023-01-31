@@ -7,6 +7,7 @@ export default function Metatags({
 }) {
   return (
     <Head>
+
       <title>{title}</title>
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@fireship_dev" />
