@@ -1,0 +1,28 @@
+[debug] [2023-01-31T21:33:08.732Z] ----------------------------------------------------------------------
+[debug] [2023-01-31T21:33:08.733Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-01-31T21:33:08.734Z] CLI Version:   11.21.0
+[debug] [2023-01-31T21:33:08.734Z] Platform:      win32
+[debug] [2023-01-31T21:33:08.734Z] Node Version:  v18.12.1
+[debug] [2023-01-31T21:33:08.735Z] Time:          Wed Feb 01 2023 03:03:08 GMT+0530 (India Standard Time)
+[debug] [2023-01-31T21:33:08.735Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-31T21:33:08.793Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-31T21:33:08.793Z] > authorizing via signed-in user (shubhammasang36@gmail.com)
+[debug] [2023-01-31T21:33:08.793Z] [iam] checking project blogstates-596cc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-01-31T21:33:08.795Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/blogstates-596cc:testIamPermissions [none]
+[debug] [2023-01-31T21:33:08.795Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/blogstates-596cc:testIamPermissions x-goog-quota-user=projects/blogstates-596cc
+[debug] [2023-01-31T21:33:08.795Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blogstates-596cc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-31T21:33:10.333Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/blogstates-596cc:testIamPermissions 200
+[debug] [2023-01-31T21:33:10.334Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blogstates-596cc:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-01-31T21:33:10.335Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blogstates-596cc [none]
+[debug] [2023-01-31T21:33:11.131Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blogstates-596cc 200
+[debug] [2023-01-31T21:33:11.132Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blogstates-596cc {"projectId":"blogstates-596cc","projectNumber":"131506203812","displayName":"blogStates","name":"projects/blogstates-596cc","resources":{"hostingSite":"blogstates-596cc","storageBucket":"blogstates-596cc.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_1d5b4c5b-cfde-43bf-bce8-f41cb47ae40b"}
+[debug] [2023-01-31T21:33:16.567Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/blogstates-596cc/sites pageToken=&pageSize=10
+[debug] [2023-01-31T21:33:17.895Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/blogstates-596cc/sites 200
+[debug] [2023-01-31T21:33:17.896Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/blogstates-596cc/sites {"sites":[{"name":"projects/blogstates-596cc/sites/blogstates-596cc","defaultUrl":"https://blogstates-596cc.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-31T21:33:17.896Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/blogstates-596cc/sites 
+[debug] [2023-01-31T21:33:19.155Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/blogstates-596cc/sites 200
+[debug] [2023-01-31T21:33:19.155Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/blogstates-596cc/sites {"sites":[{"name":"projects/blogstates-596cc/sites/blogstates-596cc","defaultUrl":"https://blogstates-596cc.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-01-31T21:33:19.156Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blogstates-596cc/webApps/-/config [none]
+[debug] [2023-01-31T21:33:20.454Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blogstates-596cc/webApps/-/config 200
+[debug] [2023-01-31T21:33:20.455Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blogstates-596cc/webApps/-/config {"projectId":"blogstates-596cc","appId":"1:131506203812:web:903527568079af32b8ca31","storageBucket":"blogstates-596cc.appspot.com","locationId":"asia-south1","apiKey":"AIzaSyDg0v3UbpEc0qTDTXMApKVlMea-7fjC-WQ","authDomain":"blogstates-596cc.firebaseapp.com","messagingSenderId":"131506203812","measurementId":"G-GG3ZP0NMXQ"}
