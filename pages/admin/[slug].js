@@ -119,13 +119,6 @@ function PostForm({ defaultValues, postRef, preview }) {
             minLength: { value: 10, message: "content is too short" },
             required: { value: true, message: "content is required" },
           })}
-
-          //   name="content"
-          //   ref={register({
-          //     maxLength: { value: 20000, message: "content is too long" },
-          //     minLength: { value: 10, message: "content is too short" },
-          //     required: { value: true, message: "content is required" },
-          //   })}
         ></textarea>
 
         {errors.content && (
@@ -133,12 +126,7 @@ function PostForm({ defaultValues, postRef, preview }) {
         )}
 
         <fieldset>
-          <input
-            className={styles.checkbox}
-            name="published"
-            type="checkbox"
-            ref={register}
-          />
+          <input className={styles.checkbox} {...register('published')} type="checkbox" />
           <label>Published</label>
         </fieldset>
 
