@@ -10,9 +10,6 @@ import debounce from "lodash.debounce";
 export default function Enter(props) {
   const { user, username } = useContext(UserContext);
 
-  // 1. user signed out <SignInButton />
-  // 2. user signed in, but missing username <UsernameForm />
-  // 3. user signed in, has username <SignOutButton />
   return (
     <main>
       <Metatags
@@ -84,7 +81,6 @@ function UsernameForm() {
     const val = e.target.value.toLowerCase();
     const re = /^(?=[a-zA-Z0-9._]{3,15}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
 
-    // Only set form value if length is < 3 OR it passes regex
     if (val.length < 3) {
       setFormValue(val);
       setLoading(false);
@@ -104,8 +100,6 @@ function UsernameForm() {
     checkUsername(formValue);
   }, [formValue]);
 
-  // Hit the database for username match after each debounced change
-  // useCallback is required for debounce to work
   const checkUsername = useCallback(
     debounce(async (username) => {
       if (username.length >= 3) {

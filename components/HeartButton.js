@@ -4,7 +4,6 @@ import { increment, writeBatch, doc, getFirestore } from "firebase/firestore";
 
 // Allows user to heart or like a post
 export default function Heart({ postRef }) {
-  // Listen to heart document for currently logged in user
   const heartRef = doc(
     getFirestore(),
     postRef.path,
@@ -13,7 +12,6 @@ export default function Heart({ postRef }) {
   );
   const [heartDoc] = useDocument(heartRef);
 
-  // Create a user-to-post relationship
   const addHeart = async () => {
     const uid = auth.currentUser.uid;
     const batch = writeBatch(getFirestore());

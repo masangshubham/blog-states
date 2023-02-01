@@ -9,7 +9,6 @@ export default function ImageUploader() {
   const [progress, setProgress] = useState(0);
   const [downloadURL, setDownloadURL] = useState(null);
 
-  // Creates a Firebase Upload Task
   const uploadFile = async (e) => {
     // Get the file
     const file = Array.from(e.target.files)[0];

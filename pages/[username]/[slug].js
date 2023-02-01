@@ -27,10 +27,8 @@ export async function getStaticProps({ params }) {
   let path;
 
   if (userDoc) {
-    // const postRef = userDoc.ref.collection('posts').doc(slug);
     const postRef = doc(getFirestore(), userDoc.ref.path, "posts", slug);
 
-    // post = postToJSON(await postRef.get());
     post = postToJSON(await getDoc(postRef));
 
     path = postRef.path;
@@ -43,7 +41,6 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  // Improve my using Admin SDK to select empty docs
   const q = query(collectionGroup(getFirestore(), "posts"), limit(20));
   const snapshot = await getDocs(q);
 
@@ -55,10 +52,6 @@ export async function getStaticPaths() {
   });
 
   return {
-    // must be in this format:
-    // paths: [
-    //   { params: { username, slug }}
-    // ],
     paths,
     fallback: "blocking",
   };

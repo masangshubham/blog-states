@@ -32,8 +32,6 @@ export default function AdminPostsPage(props) {
 }
 
 function PostList() {
-  // const ref = firestore.collection('users').doc(auth.currentUser.uid).collection('posts');
-  // const query = ref.orderBy('createdAt');
 
   const ref = collection(
     getFirestore(),
@@ -72,7 +70,6 @@ function CreateNewPost() {
     const uid = auth.currentUser.uid;
     const ref = doc(getFirestore(), "users", uid, "posts", slug);
 
-    // Tip: give all fields a default value here
     const data = {
       title,
       slug,
@@ -89,7 +86,6 @@ function CreateNewPost() {
 
     toast.success("Post created!");
 
-    // Imperative navigation after doc is set
     router.push(`/admin/${slug}`);
   };
 
