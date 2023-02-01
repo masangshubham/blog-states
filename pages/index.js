@@ -71,12 +71,14 @@ export default function Home(props) {
   return (
     <main>
       <Metatags
-        title="Home Page"
-        description="Get the latest posts on our site"
+        title="Blogstates - Share your thoughts and Blogs"
+        description="Get the latest posts on our site. Share your stories, thinking and expertise. Blogstates Community  is a community of 1,000,658 amazing developers. We're a place where coders share, stay up-to-date and grow their careers. Stay curious.The best ideas can change who we are. Blogstates is where those ideas take shape, take off, and spark powerful conversations. Were an open platform where over 100 million readers come to find insightful and dynamic thinking. Here, expert and undiscovered voices alike dive into the heart of any topic and bring new ideas to the surface. Our purpose is to spread these ideas and deepen understanding of the world.A living network of curious minds.
+        Discover stories, thinking, and expertise from writers on any topic.
+        Anyone can write on Blogstates. "
       />
 
-      {/* <div className="card card-info">
-        <h2>💡 Next.js + Firebase - The Full Course</h2>
+      <div className="card card-info">
+        <h1>Blogstates - Share your stories, thinking and expertise (¬‿¬)</h1>
         <p>
           Welcome! This app is built with Next.js and Firebase and is loosely
           inspired by Dev.to.
@@ -86,7 +88,7 @@ export default function Home(props) {
           created by other users. All public content is server-rendered and
           search-engine optimized.
         </p>
-      </div> */}
+      </div>
 
       <PostFeed posts={posts} />
 
