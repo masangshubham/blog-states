@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 export default function Metatags({
-  title = "blogStates - Share your thoughts and Blogs",
+  title = "Blogstates - Share your thoughts and Blogs",
   description = "A blogging site where users can share their blogs and view and like other posts",
   image = "https://avatars.githubusercontent.com/u/97026988?v=4",
 }) {
